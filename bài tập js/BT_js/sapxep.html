@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp theo quy luật</title>
+    <style>
+        td {
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr> 
+            <td colspan="2" style="text-align: center;"> <b>SẮP CÂU THEO QUY LUẬT</b> </td>
+        </tr>
+        <tr>
+            <td> Nhập câu ban đầu: </td>
+            <td> <input type="text" id="haui" placeholder="Tối đa 20 từ, mỗi từ không quá 10 ký tự"> </td>
+        </tr>
+        <tr>
+            <td> Câu sau khi sắp lại: </td>
+            <td> <input type="text" id="ketQua" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"> 
+                <button onclick="resetFields()"> Xóa </button>
+                <button onclick="tachTu()"> Viết lại </button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function tachTu(){
+            var word = document.getElementById("haui").value.trim();
+
+            // Kiểm tra đầu vào
+            if (word === "") {
+                alert("Không được để trống!");
+                return;
+            }
+
+            var tuArray = word.split(/\s+/);
+
+            // Kiểm tra số lượng từ
+            if (tuArray.length > 20) {
+                alert("Vui lòng nhập không quá 20 từ.");
+                return;
+            }
+
+            // Kiểm tra độ dài từng từ
+            for (let tu of tuArray) {
+                if (tu.length > 10) {
+                    alert("Mỗi từ không quá 10 ký tự. Từ \"" + tu + "\" quá dài.");
+                    return;
+                }
+            }
+
+            // Sắp xếp mảng từ không phân biệt chữ hoa/thường
+            tuArray = tuArray.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+            // Ghép lại các từ đã sắp xếp
+            var text = tuArray.join(" ");
+            document.getElementById("ketQua").value = text;
+        }
+
+        function resetFields(){
+            document.getElementById("haui").value = "";
+            document.getElementById("ketQua").value = "";
+        }
+    </script>
+</body>
+</html>

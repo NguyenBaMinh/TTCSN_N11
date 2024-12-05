@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuẩn hóa Họ và Tên</title>
+    <style>
+        td {
+            border: 1px solid black;
+            background-color: aqua;
+        }
+
+        table {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> Họ và tên: </td>
+            <td> <input type="text" id="hoVaTen"></td>
+        </tr>
+        <tr>
+            <td> Tên: </td>
+            <td> <input type="text" id="ten"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button onclick="hienThi()"> Hiển thị </button>
+                <button onclick="resetFields()"> Hủy bỏ </button>   
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function hienThi() {
+            var hoVaTen = document.getElementById("hoVaTen").value.trim();
+
+            // Loại bỏ khoảng trắng thừa và chuẩn hóa chuỗi
+            hoVaTen = hoVaTen.replace(/\s+/g, ' ');
+
+            // Tách chuỗi thành các từ
+            var tuArray = hoVaTen.split(' ');
+
+            // Lấy tên là từ cuối cùng trong chuỗi, và loại bỏ từ này khỏi mảng
+            var ten = tuArray.pop();
+
+            // Ghép lại chuỗi Họ và Tên đã chuẩn hóa (không bao gồm tên cuối)
+            var ho = tuArray.join(' ');
+
+            // Hiển thị kết quả
+            document.getElementById("hoVaTen").value = ho + ' ' + ten;
+            document.getElementById("ten").value = ten;
+        }
+
+        function resetFields() {
+            document.getElementById("hoVaTen").value = "";
+            document.getElementById("ten").value = "";
+        }
+    </script>
+</body>
+</html>

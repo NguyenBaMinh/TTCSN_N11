@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phương Trình Bậc 2</title>
+    <script>
+        function giaiPhuongTrinhBacHai() {
+            // Khai báo các hệ số
+            var a = 4;
+            var b = 6;
+            var c = 2;
+
+            // Tính delta
+            var delta = b * b - 4 * a * c;
+
+            // Khai báo biến chứa kết quả
+            var x1, x2;
+
+            if (delta < 0) {
+                document.getElementById("result").innerHTML = "Phương trình vô nghiệm";
+            } else if (delta === 0) {
+                x1 = -b / (2 * a);
+                document.getElementById("result").innerHTML = "Phương trình có nghiệm kép: x1 = x2 = " + x1;
+            } else {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("result").innerHTML = "Phương trình có hai nghiệm: x1 = " + x1 + ", x2 = " + x2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Giải phương trình bậc 2: 4x² + 6x + 2 = 0</h1>
+    <button onclick="giaiPhuongTrinhBacHai()">Giải phương trình</button>
+    <p id="result"></p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phương Trình Bậc 2</title>
+    <script>
+        function giaiPhuongTrinhBacHai() {
+            // Lấy giá trị của a, b, c từ các ô nhập liệu
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            // Kiểm tra nếu a = 0 thì không phải phương trình bậc 2
+            if (a === 0) {
+                document.getElementById("result").innerHTML = "Đây không phải là phương trình bậc 2.";
+                return;
+            }
+
+            // Tính delta
+            var delta = b * b - 4 * a * c;
+
+            // Khai báo biến chứa kết quả
+            var x1, x2;
+
+            if (delta < 0) {
+                document.getElementById("result").innerHTML = "Phương trình vô nghiệm.";
+            } else if (delta === 0) {
+                x1 = -b / (2 * a);
+                document.getElementById("result").innerHTML = "Phương trình có nghiệm kép: x1 = x2 = " + x1;
+            } else {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("result").innerHTML = "Phương trình có hai nghiệm: x1 = " + x1 + ", x2 = " + x2;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Giải phương trình bậc 2: ax² + bx + c = 0</h1>
+    
+    <!-- Form nhập liệu -->
+    <label for="a">Nhập a:</label>
+    <input type="number" id="a" step="any"><br><br>
+    
+    <label for="b">Nhập b:</label>
+    <input type="number" id="b" step="any"><br><br>
+    
+    <label for="c">Nhập c:</label>
+    <input type="number" id="c" step="any"><br><br>
+    
+    <!-- Nút để giải phương trình -->
+    <button onclick="giaiPhuongTrinhBacHai()">Giải phương trình</button>
+    
+    <!-- Kết quả -->
+    <p id="result"></p>
+</body>
+</html>
+

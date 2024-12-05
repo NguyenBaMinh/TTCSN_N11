@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép cộng 2 số có 1 chữ số</title>
+    <style>
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-gap: 10px;
+            justify-content: center;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        #display {
+            grid-column: span 4;
+            height: 40px;
+            text-align: right;
+            padding-right: 10px;
+            border: 1px solid #000;
+            font-size: 18px;
+            line-height: 40px;
+        }
+    </style>
+    <script>
+        var firstNumber = "";
+        var secondNumber = "";
+        var operator = "";
+        var resultDisplayed = false;
+
+        function handleNumberClick(number) {
+            if (operator === "") {
+                firstNumber += number;
+                document.getElementById("display").innerText = firstNumber;
+            } else {
+                secondNumber += number;
+                document.getElementById("display").innerText = secondNumber;
+            }
+        }
+
+        function handleOperatorClick(op) {
+            if (firstNumber !== "") {
+                operator = op;
+            }
+        }
+
+        function calculate() {
+            if (firstNumber !== "" && secondNumber !== "" && operator === "+") {
+                var result = parseInt(firstNumber) + parseInt(secondNumber);
+                document.getElementById("display").innerText = result;
+                resultDisplayed = true;
+            }
+        }
+
+        function clearDisplay() {
+            firstNumber = "";
+            secondNumber = "";
+            operator = "";
+            document.getElementById("display").innerText = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Phép cộng 2 số có 1 chữ số</h1>
+    <div class="calculator">
+        <div id="display"></div>
+        <button onclick="handleNumberClick('1')">1</button>
+        <button onclick="handleNumberClick('2')">2</button>
+        <button onclick="handleNumberClick('3')">3</button>
+        <button onclick="handleOperatorClick('+')">+</button>
+        <button onclick="handleNumberClick('4')">4</button>
+        <button onclick="handleNumberClick('5')">5</button>
+        <button onclick="handleNumberClick('6')">6</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="handleNumberClick('7')">7</button>
+        <button onclick="handleNumberClick('8')">8</button>
+        <button onclick="handleNumberClick('9')">9</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="handleNumberClick('0')">0</button>
+    </div>
+</body>
+</html>

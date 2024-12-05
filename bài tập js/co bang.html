@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0 ;
+            margin: 0;
+        }
+        header{
+            background-color: black;
+            display: grid;
+            grid-template-columns: 100px auto;
+        }
+        .dau{
+            text-align: center;
+        }
+        .menu{
+            background-color: aqua;
+            height: 50px;
+        }
+        .menu>ul{
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            line-height: 50px;
+        }
+        .menu ul li{
+            text-align: center;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            list-style-type: none;
+        }
+        .menu ul li a{
+            text-align: center;
+            margin-left: 10%;
+            color: black;
+            text-decoration: none;
+        }
+        .menu ul li:hover{
+            background-color: blue;
+        }
+        .cha{
+            position: relative;
+        }
+        .con{
+            background-color: aqua;
+            display: none;
+            color: black;
+            top: 50px;
+            width: 100%;
+            position: absolute;
+        }
+        .cha:hover .con{
+            display: block;
+        }
+        .menu2{
+            margin-left: 20px;
+        }
+        .menu2 ul li a{
+           color: black;
+        }
+        .than{
+            display: grid;
+            grid-template-columns: 400px auto 200px;
+        }
+        .ba{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        footer{
+            margin-top: 150px;
+            background-color: aqua;
+            text-align: center;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+            <img width="100px" height="100px" src="Capture.PNG">
+            <h1 class="dau" style="color: white;">TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI <br>KHOA CÔNG NGHỆ THÔNG TIN</h1>
+    </header>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Kinh tế</a></li>
+            <li class="cha">
+                <a href="#">Văn hóa xã hội</a>
+                <ul class="con">
+                    <li><a href="#">Kinh tế1</a></li>
+                    <li><a href="#">Kinh tế2</a></li>
+                    <li><a href="#">Kinh tế3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Giáo dục cộng</a></li>
+            <li><a href="#">Học nữa học</a></li>
+            <li><a href="#">Vừa học vừa</a></li>
+        </ul>
+    </div>
+    <div class="than">
+    <div class="menu2">
+        <h1>Tủ Sách</h1>
+        <ul>
+            <li><a href="#">Kinh tế</a></li>
+            <li><a href="#">Văn hóa xã hội</a>
+            <li><a href="#">Kinh tế1</a></li>
+             <li><a href="#">Kinh tế2</a></li>
+              <li><a href="#">Kinh tế3</a></li>
+              <li><a href="#">Giáo dục cộng</a></li>
+            <li><a href="#">Học nữa học</a></li>
+            <li><a href="#">Vừa học vừa</a></li>
+        </ul>
+    </div>
+    <div class="ba">
+        <div style="display: grid;grid-template-columns: 200px auto;">
+            <div><img width="200px" height="200px" src="Capture.PNG"></div>
+            <div style="font-size: 20px;"><p><b>Mẫu tín một</b><br>Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động
+                Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động</p></div>
+                <div><img width="200px" height="200px" src="Capture.PNG"></div>
+            <div style="font-size: 20px;"><p><b>Mẫu tín một</b><br>Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động
+                Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động</p></div>
+                <div><img width="200px" height="200px" src="Capture.PNG"></div>
+            <div style="font-size: 20px;"><p><b>Mẫu tín một</b><br>Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động
+                Thủ khoa đầu ra trường đai hovj công nghiệp hà nội không chỉ học giỏi cong=f năng động</p></div>
+        </div>
+        <div style="font-size: 20px;">
+            <div>
+                <a style="color: black;" href="#">Đăng ký|Đăng nhập</a>
+                <table border="1" style="width: 200px; margin-top: 10px;">
+                    <tr style="background-color: grey;">
+                        <td>Giỏ hàng</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tổng cộng:<br>Xem giỏ hàng<br>Thah toán</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table border="1" style="width: 200px;margin-top: 10px;">
+                    <tr>
+                        <td>Hỗ trợ trực tuyến</td>
+                    </tr>
+                    <tr style="background-color: grey;">
+                        <td>
+                            <p>admin web</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                
+                <table border="1" style="width: 200px;margin-top: 10px;">
+                    <tr style="background-color: grey;">
+                        <td>Tin mới</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tổng cộng:<br>Xem giỏ hàng<br>Thah toán</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tổng cộng:<br>Xem giỏ hàng<br>Thah toán</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <p>Bản quyền khoa công nghệ thông tin</p>
+    </footer>
+</body>
+</html>

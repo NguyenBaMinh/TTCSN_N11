@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .list{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+    .item{
+        position: relative;
+        flex: 1;
+    }
+    .item:hover .sublist{
+        display: block;
+    }
+    .link, .sublink{
+        display: block;
+        text-decoration: none;
+        background-color: #ffccff;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .link:hover, .sublink:hover{
+        background-color: #66ffff;
+    }
+    .sublist{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        list-style: none;
+        display: none;
+    }
+    .menu2{
+        width: 20%;
+    }
+    .list2{
+        list-style: none;
+    }
+    .item2, .subitem2{
+        position: relative;
+        flex: 1;
+        border: solid 1px black;
+    }
+    .item2:hover .sublist2{
+        display: block;
+    }
+    .link2, .sublink2{
+        display: block;
+        text-decoration: none;
+        background-color: greenyellow;
+        text-align: center;
+        padding: 10px 10px;
+    }
+    .link2:hover, .sublink2:hover{
+        background-color: #e1af4b;
+    }
+    .sublist2{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        list-style: none;
+        display: none;
+    }
+</style>
+<body>
+    <header>
+        <h1>TEST</h1>
+    </header>
+    <div class="menu1">
+        <ul class="list">
+            <li class="item"><a href="" class="link">Home</a></li>
+            <li class="item"><a href="" class="link">Tim Kiem</a></li>
+            <li class="item"><a href="" class="link">Loai</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="" class="sublink">A</a></li>
+                    <li class="subitem"><a href="" class="sublink">B</a></li>
+                    <li class="subitem"><a href="" class="sublink">C</a></li>
+                    <li class="subitem"><a href="" class="sublink">D</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="" class="link">San Pham</a></li>
+            <li class="item"><a href="" class="link">Xep Loai</a></li>
+            <li class="item"><a href="" class="link">Them</a></li>
+        </ul>
+    </div>
+    <div class="menu2">
+        <ul class="list2">
+            <li class="item2"><a href="" class="link2">Trang chu</a></li>
+            <li class="item2"><a href="" class="link2">Trang thai</a></li>
+            <li class="item2"><a href="" class="link2">Phan loai</a></li>
+            <li class="item2"><a href="" class="link2">Danh muc</a></li>
+            <li class="item2"><a href="" class="link2">Thanh phan</a></li>
+            <li class="item2"><a href="" class="link2">Muc tieu</a></li>
+            <li class="item2"><a href="" class="link2">Chinh sach</a>
+                <ul class="sublist2">
+                    <li class="subitem2"><a href="" class="sublink2">VIP</a></li>
+                    <li class="subitem2"><a href="" class="sublink2">V1</a></li>
+                    <li class="subitem2"><a href="" class="sublink2">V2</a></li>
+                    <li class="subitem2"><a href="" class="sublink2">V3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

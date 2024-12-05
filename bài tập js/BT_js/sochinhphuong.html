@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de 06 - bai kiem tra so 2</title>
+</head>
+<body>
+    <div align="center" style="margin-top: 100px;">TÍNH TỔNG SỐ CHÍNH PHƯƠNG</div>
+    <table align="center">
+        <tr>
+            <td><label for="input">Số nguyên n: </label></td>
+            <td><input type="number" name="" id="input" placeholder="Nhập số nguyên n"></td>
+        </tr>
+        <tr>
+            <td>Tổng giá trị các số chính phương</td>
+            <td><input type="text" id="output" readonly></td>
+        </tr>
+    </table>
+    <div align="center"><button onclick="calculator()">Tính</button></div>
+
+    <script>
+        function calculator() {
+            var input = document.getElementById('input')
+            var n = parseInt(input.value)
+            if (!n) {
+                alert('Yeu cau nhap du dieu')
+                input.focus()
+            }
+            if (n < 0) {
+            document.getElementById('output').value = 0
+            }
+            var sum = 0
+            for (var i = 0; i < n; i++) {
+                if (Math.sqrt(i) % 1 == 0) {
+                    sum += i
+                }
+            }
+            
+            document.getElementById('output').value = sum
+        }
+    </script>
+</body>
+</html>

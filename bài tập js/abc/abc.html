@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex {
+        display: flex;
+        margin: 6px 0;
+      }
+      .w-200 {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <script>
+    function handleConfirm() {
+      const name = document.getElementById("name");
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("password-confirm");
+      const date = document.getElementById("date");
+      const number = document.getElementById("number");
+      const file = document.getElementById("file");
+      if (/\d/.test(name.value)) {
+        alert("Họ và tên không được chứa số");
+        return false;
+      }
+      const passwordPattern =
+        /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+      if (!passwordPattern.test(password.value)) {
+        alert(
+          "Mật khẩu phải chứa ít nhất 1 chữ cái viết hoa, 1 chữ cái viết thường, 1 ký tự đặc biệt, 1 chữ số và tối thiểu 8 ký tự."
+        );
+        return false;
+      }
+      if (password.value !== confirmPassword.value) {
+        alert("Mật khẩu xác nhận không khớp.");
+        return false;
+      }
+      const phonePattern = /^[\d()-]+$/;
+      if (!phonePattern.test(number.value)) {
+        alert("Số điện thoại chỉ được chứa số và các ký tự () hoặc -.");
+        return false;
+      }
+
+      alert("Form đã được gửi thành công!");
+    }
+    function handleDelete() {
+      document.getElementById("name").value = "";
+      document.getElementById("password").value = "";
+      document.getElementById("password-confirm").value = "";
+      document.getElementById("number").value = "";
+      document.getElementById("date").value = "";
+      document.getElementById("file").value = "";
+    }
+  </script>
+  <body style="display: flex; justify-content: center; margin: 0">
+    <form
+      style="width: 350px; border: 1px solid #ccc; padding: 4px"
+      onsubmit="return handleConfirm()"
+    >
+      <h2 style="text-align: center">Đăng kí thành viên</h2>
+      <div class="flex">
+        <div class="w-200">Họ và tên</div>
+        <input id="name" />
+      </div>
+      <div class="flex">
+        <div class="w-200">Mật khẩu</div>
+        <input id="password" type="password" />
+      </div>
+      <div class="flex">
+        <div class="w-200">Khẳng định mật khẩu</div>
+        <input id="password-confirm" type="password" />
+      </div>
+      <div class="flex">
+        <div class="w-200">Ngày tháng năm sinh</div>
+        <input id="date" type="date" />
+      </div>
+      <div class="flex">
+        <div class="w-200">Số điện thoại</div>
+        <input id="number" />
+      </div>
+      <div class="flex">
+        <div class="w-200">Đường dẫn ảnh</div>
+        <input type="file" id="file" />
+      </div>
+      <div class="flex">
+        <div style="width: 200px"></div>
+        <button type="submit">Đăng ký</button>
+        <button type="button" onclick="handleDelete()">Hủy bỏ</button>
+      </div>
+    </form>
+  </body>
+</html>
