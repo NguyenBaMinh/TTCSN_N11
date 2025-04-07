@@ -1,0 +1,14 @@
+D:\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).exe.config
+D:\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).exe
+D:\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).pdb
+D:\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).csproj.AssemblyReference.cache
+D:\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).csproj.CoreCompileInputs.cache
+D:\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).exe
+D:\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).pdb
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).exe.config
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).exe
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\bin\Debug\OnTapTx1(bai2).pdb
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).csproj.AssemblyReference.cache
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).csproj.CoreCompileInputs.cache
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).exe
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTx1(bai2)\obj\Debug\OnTapTx1(bai2).pdb

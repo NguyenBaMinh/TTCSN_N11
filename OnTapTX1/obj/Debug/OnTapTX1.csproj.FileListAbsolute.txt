@@ -1,0 +1,14 @@
+D:\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.exe.config
+D:\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.exe
+D:\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.pdb
+D:\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.csproj.AssemblyReference.cache
+D:\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.csproj.CoreCompileInputs.cache
+D:\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.exe
+D:\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.pdb
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.exe.config
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.exe
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\bin\Debug\OnTapTX1.pdb
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.csproj.AssemblyReference.cache
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.csproj.CoreCompileInputs.cache
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.exe
+M:\.NET\Lập trình .NET\Lập trình .NET\OnTapTX1\obj\Debug\OnTapTX1.pdb
